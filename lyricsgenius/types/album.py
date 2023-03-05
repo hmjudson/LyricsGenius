@@ -114,7 +114,7 @@ class Track(BaseEntity):
                     sanitize=True,
                     verbose=True):
         if filename is None:
-            filename = 'Lyrics_{:02d}_{}'.format(self.number, self.song.title)
+            filename = 'Lyrics_{:02d}_{}'.format(self.number, self.song.title, self.artist)
             filename = filename.replace(' ', '')
 
         return super().save_lyrics(filename=filename,
